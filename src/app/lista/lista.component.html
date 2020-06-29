@@ -1,0 +1,27 @@
+<h2>LISTA EMPRESAS</h2>
+<ul class="empresas">
+    <li *ngFor="let empresa of empresas"
+        [class.selected]="empresa === selectedEmpresa"
+        (click)="onSelect(empresa)">
+      <span class="badge"> {{empresa.nit}} </span> {{empresa.nombre}}
+    </li>
+  </ul>
+<div *ngIf="selectedEmpresa">
+    <h2>
+        {{selectedEmpresa.nombre | uppercase}} Detalles
+    </h2>
+    <div>
+        <span>NIT:
+        </span>{{selectedEmpresa.nit}}
+    </div>
+    <div>
+        <label>NOMBRE DE LA EMPRESAS
+            <input [(ngModel)]="selectedEmpresa.nombre"
+            placeholder="nombre"/>
+        </label>
+        <label>NIT DE LA EMPRESA
+            <input [(ngModel)]="selectedEmpresa.nit"
+            placeholder="nit"/>
+        </label>
+    </div>
+</div>

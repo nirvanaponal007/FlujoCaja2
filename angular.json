@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "flujo2"
+    }
+  },
+  "defaultProject": "flujo2",
+  "cli": {
+    "analytics": "dbe406da-33c2-48ea-a936-3c00de7baf51"
+  }
 }
